@@ -1,0 +1,229 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; nREPL Connection was closed
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.25.11"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉layout-gen.core꞉> 
+; Jack-in done.
+clj꞉layout-gen.core꞉> 
+; Syntax error compiling at (src/layout_gen/annealing.clj:28:3).
+; Unable to resolve symbol: cutoff_p in this context
+clj꞉layout-gen.annealing꞉> 
+; Syntax error compiling at (src/layout_gen/annealing.clj:25:3).
+; Unable to resolve symbol: P0 in this context
+clj꞉layout-gen.annealing꞉> 
+; Syntax error compiling at (src/layout_gen/annealing.clj:20:5).
+; Unable to resolve symbol: temperature in this context
+clj꞉layout-gen.annealing꞉> 
+2.718281828459045
+clj꞉layout-gen.annealing꞉> 
+; Syntax error compiling at (src/layout_gen/annealing.clj:18:1).
+; No such namespace: math
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+7.3890560989306495
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Error printing return value (ClassCastException) at layout-gen.annealing/temperature (annealing.clj:16).
+; java.lang.Double cannot be cast to clojure.lang.IFn
+clj꞉layout-gen.annealing꞉> 
+#'layout-gen.annealing/temperature
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Error printing return value (ClassCastException) at clojure.lang.Var/fn (Var.java:368).
+; java.lang.Double cannot be cast to clojure.lang.IFn
+clj꞉layout-gen.annealing꞉> 
+; Error printing return value (ClassCastException) at layout-gen.annealing/temperature (annealing.clj:16).
+; java.lang.Double cannot be cast to clojure.lang.IFn
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+(1.5
+ 0.770125678548888
+ 0.39539570717359024
+ 0.20300292485491905
+ 0.10422517683420233
+ 0.05351099002087863
+ 0.02747345833310128
+ 0.014105343827242826
+ 0.007241924990747165
+ 0.003718128264999539
+ 0.0019089507020097144
+ 9.800879698010714E-4
+ 5.031939418537679E-4
+ 2.5834838394121534E-4
+ 1.3264048298982484E-4
+ 6.80998946437273E-5)
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (src/layout_gen/annealing.clj:20:1).
+; No matching method exp found taking 0 args for class java.lang.Math
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+; Syntax error compiling at (src/layout_gen/annealing.clj:16:9).
+; No such var: math/exp
+; Evaluation of file annealing.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉layout-gen.annealing꞉> 
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+(1.5
+ 0.770125678548888
+ 0.3953957071735902
+ 0.20300292485491905
+ 0.10422517683420232
+ 0.05351099002087861
+ 0.027473458333101268
+ 0.014105343827242819
+ 0.007241924990747162
+ 0.0037181282649995377
+ 0.0019089507020097134
+ 9.80087969801071E-4
+ 5.031939418537678E-4
+ 2.5834838394121523E-4
+ 1.3264048298982476E-4
+ 6.809989464372728E-5)
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+(1.4990003332592716
+ 0.7696124325308706
+ 0.39513219788166476
+ 0.20286763467342034
+ 0.10415571653898387
+ 0.05347532791622038
+ 0.027455148798069012
+ 0.01409594339851572
+ 0.00723709864971243
+ 0.003715650338890016
+ 0.0019076784923253878
+ 9.794347955701388E-4
+ 5.028585910218968E-4
+ 2.581762090832504E-4
+ 1.3255208547027861E-4)
+clj꞉layout-gen.annealing꞉> 
+(1.5
+ 0.770125678548888
+ 0.3953957071735902
+ 0.20300292485491905
+ 0.10422517683420232
+ 0.05351099002087861
+ 0.027473458333101268
+ 0.014105343827242819
+ 0.007241924990747162
+ 0.0037181282649995377
+ 0.0019089507020097134
+ 9.80087969801071E-4
+ 5.031939418537678E-4
+ 2.5834838394121523E-4
+ 1.3264048298982476E-4
+ 6.809989464372728E-5)
+clj꞉layout-gen.annealing꞉> 
+0.935465394005511
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+0.9312173157832258
+clj꞉layout-gen.annealing꞉> 
+1.7765220060379037E-23
+clj꞉layout-gen.annealing꞉> 
+0.8782280894867074
+clj꞉layout-gen.annealing꞉> 
+0.15431258007406248
+clj꞉layout-gen.annealing꞉> 
+4.96148855316057E-8
+clj꞉layout-gen.annealing꞉> 
+0.15431258007406248
+clj꞉layout-gen.annealing꞉> 
+6.480353056893022
+clj꞉layout-gen.annealing꞉> 
+0.15431258007406248
+clj꞉layout-gen.annealing꞉> 
+8.338044185735058E-4
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
+; Evaluating file: annealing.clj
+#'layout-gen.annealing/get_simulation_range
+; Running tests for layout-gen.annealing...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉layout-gen.annealing꞉> 
