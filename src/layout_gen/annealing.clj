@@ -25,10 +25,6 @@
 ;; p(dE, i) = p0 exp(-dE/T(i))
 (defn cutoff_p [dE i]
   (* P0 (Math/exp (/ (- dE) (temperature i)))))
-;; z = e^(-dE / f(i))
-;; ln(z) = -dE/f(i)
-;; ln(z) * f(i) = -dE
-;; -ln(z)f(i) = dE
 
 (comment
   (cutoff_p 0.1 7000))
