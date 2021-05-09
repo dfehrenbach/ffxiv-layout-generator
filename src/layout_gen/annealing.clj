@@ -27,12 +27,17 @@
   (* P0 (Math/exp (/ (- dE) (temperature i)))))
 
 (comment
-  (cutoff_p 0.1 7000))
+  (cutoff_p 0.1 4000))
 
 ;; For positive dE, accept if r < p_dE where r ~ Uniform(0, 1)
+;; larger num is better
+;; d1 - d0
 (defn accept_transition [dE i]
-  (if (< dE 0.0) true
-      (< (rand) (cutoff_p dE, i))))
+  (if (< 0.0 dE) true
+      (< (rand) (cutoff_p (- dE), i))))
+
+(comment
+  (accept_transition -0.1 4000))
 
 (defn get_simulation_range []
   (range 1 (+ N 1)))

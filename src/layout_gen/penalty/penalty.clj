@@ -5,7 +5,8 @@
             [layout-gen.penalty.speed :as speed]
             [layout-gen.penalty.modifier :as modifier]
             [layout-gen.layout :as layout]
-            [layout-gen.corpus :as corpus]))
+            [layout-gen.corpus :as corpus]
+            [criterium.core :as criterium]))
 
 (def penalty-matrix
   (matrix/mul flow/matrix
@@ -34,22 +35,25 @@
        modifier-penalty-a
        modifier-penalty-b)))
 
-(defn penalty-for-layout [corpus keyvec]
-  (let [bigram-map (corpus/build-bigrams-map corpus)
-        value->key (layout/derive-value->key keyvec)]
+(defn penalty-for-layout [corpus-bigrams keyvec]
+  (let [value->key (layout/derive-value->key keyvec)]
     (reduce (fn [acc [[valuea valueb] occurrences]]
               (let [keya (value->key valuea)
                     keyb (value->key valueb)]
                 (+ acc (* occurrences (penalty-for-bigram keya keyb)))))
-            0 bigram-map)))
+            0 corpus-bigrams)))
 
 
 (comment
-  (def corp (corpus/gen-very-large-corpus))
+  (def corp (corpus/build-bigrams-map (corpus/gen-very-large-corpus)))
   (def basic (layout/build-keyvec {:basekeys layout/lower-keys}))
   corp
   basic
-  (penalty-for-layout corp basic)
+  (criterium/with-progress-reporting
+    (criterium/quick-bench
+     (corpus/build-bigrams-map corp)))
+
+  (corpus/build-bigrams-map corp)
 
   (/ (reduce + (repeatedly 50 #(penalty-for-layout corp basic))) 50)
   (+ 1 2)

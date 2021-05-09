@@ -9,7 +9,8 @@
                  [metosin/malli "0.4.0"]
                  [net.mikera/core.matrix "0.62.0"]
                  [clojure-csv/clojure-csv "2.0.1"]
-                 [semantic-csv "0.2.1-alpha1"]]
+                 [semantic-csv "0.2.1-alpha1"]
+                 [criterium "0.4.6"]]
   :main ^:skip-aot layout-gen.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all
