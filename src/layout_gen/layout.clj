@@ -165,18 +165,12 @@
          (filter #((or used default-used) (:key/val %)))
          vec)))
 
-(defn derive-index->key [keyvec]
-  (reduce (fn [acc {position :key/position :as key}]
-            (assoc acc position key))
-          {} keyvec))
-
 (defn derive-value->key [keyvec]
   (reduce (fn [acc {val :key/val :as key}]
             (assoc acc val key))
           {} keyvec))
 
 ; SWAP AND SORT FNS
-
 
 (defn -swap-keys [keys [posa posb]]
   (let [[swapa swapb] [(assoc (nth keys posa) :key/position posb)
@@ -186,9 +180,6 @@
         (assoc (:key/position swapb) swapb))))
 (def =>-swap-keys [:=> [:cat [:* Key] :cat [nat-int? nat-int?]] [:* Key]])
 (def swap-keys (memoize -swap-keys))
-
-(defn sort-keyvec [keys]
-  (sort-by :key/position keys))
 
 (comment
 
