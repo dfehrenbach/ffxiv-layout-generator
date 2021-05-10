@@ -77,7 +77,7 @@
   (apply concat (repeatedly 10 gen-large-corpus)))
 
 (defn build-bigrams-map [corpus]
-  (frequencies (partition 2 corpus)))
+  (frequencies (partition 2 1 corpus)))
 
 (comment
   (def data (get-data))
